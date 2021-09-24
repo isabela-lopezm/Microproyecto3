@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+* { 
+    margin: 0; 
+    padding: 0px;
+    box-sizing: border-box; 
+    font-family: 'Lato', sans-serif; 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .menu{
+        display: flex;
+        height: 40px;
+        align-items: center;
+        background: #303030; 
+    }
+        .logo{
+            flex: 1 1 25%;
+        }
+        .logoimg{
+            width: 50px;
+            height: 40px;
+        }
+        .titulo{
+            display: flex;
+            flex: 1 1 50%;  
+            justify-content: center;
+            font-size: 25px;
+            color: white;
+            font-weight: 700;
+        }
+        .isesion{
+            display: flex;
+            justify-content: center;
+            flex: 1 1 25%;
+            font-size: 13.5px;
+          }
+          .isesion_iniciar{
+              color: white;
+          }
+          .isesion a:hover{
+              color: #000
+          } 
+    .navegacion{
+        display: flex;  
+    }
+    .nav{
+        display: flex;
+        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: white;
+        flex-basis: 100%;
+        padding: 10px;
+        box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.6);
+        
+    }
+        .nav a{
+            padding: 6px;
+            font-weight: bolder;
+        }
+        .nav a:hover{
+            color: #01a7d4;
+            border-bottom: 3px solid  #0090b9;
+        }
+
+.section{
+    display: flex;
+    flex-direction: column;
+   /*height: 480px;*/
+}
+    .seccion{
+        display: flex;
+        flex: 1 1 70%;
+    }
+
+    .aside{
+        background: #ececec;
+        flex: 1 1 auto;
+        padding: 0px;
+        font-weight: bolder;
+    }
+        .aside a:hover{
+            color: rgb(143, 143, 143);
+        } 
+        .destacados{
+        margin-top: 3px;
+        background: #303030;
+        color: white;
+        text-transform: uppercase;
+        font-size: 11.5px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 10px;
+    }
+    .hrn{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+        .redes{
+            margin-top: 10px;
+        }
+            .redes_iconos{
+                display: flex;
+                justify-content: center;
+            }
+            .red{
+                width: 20px;
+                height: 20px;
+            }
+
+        .aside a{
+            display: block;
+            text-align: center;
+            font-size: 13.5px;
+            padding: 5px;
+        }
+
+.footer{
+    display: flex;
+    height: 40px;
+    background-color: #131313;
+    color: white;
+}
+    .close{
+        flex: 1 1 50%;
+        font-size: 10px;
+    }
+
+    .container_ubicorreo{
+        font-size: 10px;
+        margin: 5px;
+    }
+
+
+/*Móvil*/
+@media only screen and (max-width: 767px){ 
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px){ 
+    .menu{
+        height: 50px;
+    }
+    .titulo{
+        font-size: 32px;
+    }
+    .logoimg{
+        width: 60px;
+        height: 50px;
+    }
+    .isesion{
+        font-size: 16px;
+    }
+    .nav{
+        font-size: 15.5px;
+    }
+        .nav a{
+            margin: 0 15px;
+        }
+    .section{
+        flex-direction: row;
+    }
+
+    .aside a{
+        font-size: 13.5px;
+    }
+    .destacados{
+        margin-top: 0;
+    }
+    .hrn{
+        flex-direction: column;
+    }
+    .redes{
+        margin-top: 25px;
+    }
+    .home{
+        margin-top: 20px;
+    }
+    .close,
+    .container_ubicorreo{
+        font-size: 12px;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1024px){ 
+    .menu{
+        height: 65px;
+    }
+    .logoimg{
+        width: 75px;
+        height: 65px;
+        margin-left: 30px;
+    }
+    .titulo{
+        font-size: 45px;
+    }
+    .isesion{
+        font-size: 18px;
+    }
+    .nav{
+        font-size: 17px;
+    }
+        .nav a{
+            margin: 0 20px;
+        }
+    .section{
+        flex-direction: row;
+    }
+    .aside a{
+        font-size: 16px;
+    }
+    .destacados{
+        margin-top: 0;
+        font-size: 14px;
+    }
+    .hrn{
+        flex-direction: column;
+    }
+    .report,
+    .novedades{
+        margin-top: 14px;
+    }
+    .redes{
+        margin-top: 60px;
+    }
+    .home{
+        margin-top: 20px;
+    }
+    .close,
+    .container_ubicorreo{
+        font-size: 15px;
+    }
+}

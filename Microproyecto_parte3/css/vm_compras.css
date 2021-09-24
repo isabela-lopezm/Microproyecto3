@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+* { 
+    margin: 0; 
+    padding: 0px;
+    box-sizing: border-box; 
+    font-family: 'Lato', sans-serif; 
+}
+
+.ventana_crear,
+.ventana_produc,
+.ventana_mod,
+.ventana_producmod{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.5);
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+    .ventana_crear:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .ventana_produc:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .ventana_mod:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .ventana_producmod:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .cont_ventana{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.6);
+        background: #fff;
+        transition: all 500ms ease;
+        width: 300px;
+    }
+
+    .cont_ventana2{ /*Ventana agregar productos*/
+        width: 280px;
+    }
+
+    .ventana_header{
+        display: flex;
+        padding: 10px;
+        background: #0090b9 ;
+        width: 100%;
+    }
+        .titulo_vent{
+            width: 100%;
+            font-size: 14px;
+            font-weight: bolder;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+        }
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            margin-top: 12px;
+        }
+        .formulario div{
+            margin: 5px 30px;            
+        }
+        .formulario input,
+        .formulario button{
+            margin-top: 8px;
+            padding: 8px;
+            border-radius: 5px;
+            width: 95%;
+            border: 1px solid gray; 
+        }
+        .formulario small{
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 13px;
+            visibility: hidden;
+        }
+
+   
+        .formulario.error div{
+            margin: 5px 30px;            
+        }
+        .formulario.error small{
+            color: #e74c3c;
+            visibility: visible;
+        
+        }
+        .formulario.error input{
+            border-color: #e74c3c;
+        }
+        .formulario.correcto input{
+            border-color: #2ecc71;
+            visibility: visible;
+        }
+
+        .prod{
+            display:flex;
+            align-items: center;
+        }
+            .prod button{ 
+                color: black;
+                text-align: end;
+                font-weight: bolder;
+                border-radius: 10px;
+                width: 80px;
+                padding: 6px;
+                border: 1px solid #57bb60;
+                background-color: #57bb60;
+                cursor: pointer;
+                outline: none;
+                margin: 0 8px;
+                font-size: 13px;
+            }
+            .prod i{
+                position: absolute;
+                margin-left: 83px;
+                margin-top: 3px;
+                font-size: 13px;
+            }
+
+    /*Tabla*/
+    .table_vent-container{
+        background-color: white;
+        border-radius: 3px;
+        font-size: 11px;
+        width: 90%;
+        margin-left: 10px; 
+        /*height: 100%;
+        overflow-x: auto;*/
+        overflow: auto;
+        height: 135px;
+    }
+    .table_vent{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+        .table_vent thead{
+            background-color: #0090b9;
+            font-size: 12px;
+        }
+
+        .table_vent th,
+        .table_vent td{
+            padding: 7px;
+            border-bottom: 1px solid rgb(61, 68, 73);
+        }
+
+        .table_vent th{
+            color:white;
+            border-bottom: 3px solid rgb(61, 68, 73);
+        }
+        .table_vent tbody tr:nth-child(even){
+            background-color: rgba(219, 219, 219, 0.767);
+
+        } 
+            .titulo_prod{
+                 font-size: 13px;
+                 padding: 8px;
+                 width: 100%;
+                 text-align: center;
+                 font-weight: bold;
+                 border-right: 1px solid white;
+            }      
+
+        .botones_ventana{
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+            .botones_ventana input, .botones_ventana button{
+                margin:0px 8px;
+                width: 80px;
+                height: 32px;
+            }
+        .boton_modtabla{
+            text-align: center;
+            font-size: 2px;
+            border-radius: 8px;
+            width: 60px;
+            padding: 4px;
+            border: 1px solid #0090b9;
+            background-color: #0090b9;
+            cursor: pointer;
+            outline: none;
+            color: white;
+        }
+
+        #edit{
+            font-size: 12px;
+        }
+
+
+
+.formulario_v2{ /*Ventana agregar productos*/
+    display: flex;
+    margin: 0 12px;
+    font-size: 16px;
+}
+    .formulario_v2 div{
+        margin: 5px 2px;            
+    }
+    .formulario_v2 input,  .formulario_v2 select{
+        margin-top: 3px;
+        padding: 7px;
+        border-radius: 5px;
+        width: 95%;
+        border: 1px solid gray; 
+    }
+    .formulario_v2 small{
+        display: flex;
+        color: #e74c3c;
+        font-weight: bold;
+        font-size: 12px;
+        visibility: hidden;
+    }
+
+    .formulario_v2.error, .formulario_v2.correcto{
+        display: flex;
+        flex-direction: column;
+        margin: 5px 2px;
+        font-size: 16px;
+     
+    }
+    .formulario_v2.error small{
+        color: #e74c3c;
+        visibility: visible;
+    }
+    .formulario_v2.error input, .formulario_v2.error select{
+        border-color: #e74c3c;
+        margin-top: 3px;
+        padding: 7px;
+        border-radius: 5px;
+    }
+    .formulario_v2.error div{
+        margin: 10px;
+    }
+
+    .formulario_v2.correcto input, .formulario_v2.correcto select{
+        border-color: #2ecc71;
+        visibility: visible;
+        
+    }
+    .formp1{
+        display:flex;
+        flex-direction: column;
+        flex: 1 1 50%;
+    }
+    .formp2{
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 50%;
+    }
+        .form_agregarimg{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+    .botonagregar{ 
+        text-align: center;
+        color: white;
+        height: 20px;
+        width: 20px;
+        font-size: 15px;
+        border-radius: 30%;
+        font-weight: bolder;
+        background-color: #2ea7ac;
+    }
+    .containerbtn{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .boton_atras,.boton_ag{
+        padding: 7px;
+        font-size: 12.5px;
+        margin-right: 10px;
+    }
+        .boton_ag{ 
+            width: 115px;
+            margin-left: 20px;
+        }
+    
+
+
+/*Móvil*/
+@media only screen and (max-width: 767px){ 
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px){ 
+    .cont_ventana{
+        width: 360px;
+    }
+    .cont_ventana2{ /*Ventana agregar productos*/
+        width: 390px;
+    }
+    .formulario{
+        font-size: 17px;
+        margin: 10px 20px;
+    }
+    .formulario_v2{
+        font-size: 18px;
+        margin: 0 18px;
+    }
+    .titulo_prod{
+        font-size: 14px;
+    }
+    .formulario.error input{
+        width: 247px;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1024px){ 
+    .cont_ventana{
+        width:430px;
+        height: 540px;
+    }
+    .boton_modtabla{
+        font-size: 5px;
+    }
+    .cont_ventana2{ /*Ventana agregar productos*/
+        width: 430px;
+        height: 490px;
+    }
+    .table_vent thead{
+        font-size: 12.5px;
+    }
+    .table_vent{
+        width: 95%;
+        margin-left: 8px; 
+    }
+    .titulo_prod{
+         font-size: 15px;
+    }
+    .botones_ventana input{
+        height: 34px;
+    }
+    .formulario{
+        font-size: 17.5px;
+        margin: 15px 20px;
+    }
+    .formulario_v2{
+        font-size: 20px;
+        margin: 0 28px;
+    }
+ 
+    .boton_atras,.boton_ag{
+        padding:7.2px;
+        font-size: 13px;
+      
+    }
+    .formulario.error div{
+        width: 330px;
+        height: 80px;
+    }
+    .formulario.error input{
+        width: 313.5px;
+    }
+
+    .formulario_v2.error, .formulario_v2.correcto{
+        font-size: 20px;
+
+    }
+    .formulario_v2.error input, .formulario_v2.correcto input{
+        width: 170.05px;
+    }
+
+    .boton_guardarc, #btn-atras2{
+        padding: 8px;
+        width: 80px;
+    }
+}

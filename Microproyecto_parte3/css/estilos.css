@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Lato', sans-serif; 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;   
+}
+.margin-container{ 
+    padding: 0 5px;
+}
+
+.header{
+    display: flex;
+    background-image: url(../img/fondo8.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    flex-flow: column nowrap;
+    height: 250px;
+}
+    .menu{
+        display: flex;
+        height: 40px;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.425); 
+
+    }
+        .logo{
+            flex: 1 1 25%;
+        }
+        .logoimg{
+            width: 50px;
+            height: 40px;
+        }
+        .titulo{
+            display: flex;
+            flex: 1 1 50%;  
+            justify-content: center;
+            font-size: 25px;
+            color: white;
+            font-family: 'Dosis', sans-serif;   
+        }
+        .isesion{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 25%;
+            font-size: 13.5px;     
+          }
+          .isesion_iniciar{
+              color: white;
+              font-weight: bolder;
+              width: 80px;
+          }
+          .isesion a:hover{
+              color: #000
+          } 
+
+    .reportes{
+        align-self: center;
+        font-size: 13.5px;
+        font-weight: bolder;
+        padding: 15px; 
+        color: white;    
+    }
+
+    .contenedor_mensaje{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+        color: white;;
+        font-weight: bold;
+        margin-top: 60px;
+        font-family: 'Oswald', sans-serif;
+    }
+    .titacme{
+        font-size: 45px;
+    }
+
+    .slogan{
+        font-size: 12px;
+    }
+
+    .cantidad{
+        display: flex;
+        background: rgba(255, 255, 255, 0.349); 
+        justify-content: center;
+        padding: 10px;
+        margin-top: 10px;
+        width: 70%;
+        align-items: center;
+        margin-left: 15%;
+    }
+        .cantidad i{ 
+            font-size: 35px;
+        }
+
+        .cantidad div{
+            box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.4);
+            border-radius: 0;    
+            flex: 1 1 auto;
+            text-align: center;
+            font-size: 11px; 
+            margin: 10px;
+        }
+
+.section{
+    display: flex;
+    flex-direction: column;
+}
+    .abast-productos{
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 70%;
+        flex-wrap: wrap; 
+    }
+    .abast-productos_texto{
+        display: flex;
+        flex-basis: 100%; 
+        justify-content: center;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 10px;
+        font-weight: bold;
+        align-items: center;
+    }
+        .product{
+            display: flex;
+            background: #ececec;
+            flex: 1 1 45%;
+            justify-content: space-evenly; 
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.308);
+        }
+
+        .product_img{
+            display: flex;
+            width: 135px;
+            height: 100px;
+        }
+
+        .info_product{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background: rgba(255, 255, 255, 0.575);
+            border-radius: 8px;
+            flex-basis: 160px;
+            box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.308);
+        }      
+        .ver_mas{
+            color: black;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bolder;
+            font-size: 13px;
+            background-color: #009cc7;
+        }
+            .info_product a:hover{
+                background: #01abda;
+            }
+
+    .nav-productos{
+        background-color:#000;
+        flex-basis: 100%; 
+    }
+
+    .nav-productos a{
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12.5px;
+        padding: 5px;
+    }
+   
+.aside{
+    background: #ececec;
+    flex: 1 1 auto;
+    padding: 0px;
+    font-weight: bolder;
+}
+    .aside a:hover{
+        color: rgb(143, 143, 143);
+    } 
+    .destacados{
+        margin-top: 3px;
+        background: #000;
+        color: white;
+        text-transform: uppercase;
+        font-size: 11.5px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hrn{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;    
+    }
+    .redes{
+        margin-top: 10px;
+    }
+        .redes_iconos{
+            display: flex;
+            justify-content: center;
+        }
+        .red{
+            width: 20px;
+            height: 20px;
+        }
+    .aside a{
+        display: block;
+        text-align: center;
+        font-size: 13.5px;
+        padding: 5px;
+    }
+
+.footer{
+    display: flex;
+    height: 40px;
+    background: #000;
+    margin-top: 8px;
+    color: white;
+}
+    .close{
+        flex: 1 1 50%;
+        font-size: 10px;
+    }
+
+    .container_ubicorreo{
+        font-size: 10px;
+        margin: 5px;
+    }
+
+
+    .ventana_prod{     /*Ventana*/
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top:0;
+        left:0;
+        background: rgba(0,0,0,0.5);
+        transition: all 500ms ease;
+        opacity: 0;
+        visibility: hidden;    
+    }
+        .ventana_prod:target{
+            opacity: 1;
+            visibility: visible;
+        }
+        .cont_ventana{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.6);
+            background: #fff;
+            transition: all 500ms ease;
+            width: 280px;  
+        }
+
+        .ventana_header{
+            display: flex;
+            padding: 10px;
+            background: #0090b9 ;
+            width: 100%;
+        }
+            .titulo_vent{
+                width: 100%;
+                font-size: 14px;
+                font-weight: bolder;
+                text-align: center;
+                text-transform: uppercase;
+                color:white;
+            }
+            .boton{ 
+                text-align: center;
+                font-weight: bold;
+                border-radius: 10px;
+                width: 65px;
+                padding: 5px;
+                border: 1px solid #0090b9;
+                background-color: #0090b9;
+                cursor: pointer;
+                outline: none;
+                color: white;
+            }
+            .botones_ventana{
+                display: flex;
+                justify-content: center;
+                margin: 10px 0;
+            }
+                .botones_ventana input{
+                    margin:0px 8px;
+                    width: 100px;
+                    height: 32px;
+                }
+    .info{
+        margin-top: 20px;
+    }
+    .info div{
+        margin: 10px 0;
+    }
+    .txt{
+        font-weight:bolder;
+        margin: 40px 0;
+    }
+        .linea2 {
+            border-top: 1px solid black;
+            height: 2px;
+            width: 30%;
+            max-width: 70%;
+            padding: 0;
+            margin: 20px auto 15px auto;
+          }
+          .nombre_prod{
+              text-align: center;
+              margin-bottom: 10px;
+              text-transform: uppercase;
+          }
+          .separador{
+            display: flex;
+            text-align: center;
+            align-items: center;
+          }
+          .separador h4{
+              margin: 0 10px;
+          }
+      
+/*Móvil*/
+@media only screen and (max-width: 767px){ 
+
+}
+
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px){ 
+    .header{
+        height: 360px;
+    }
+    .menu{
+        height: 50px;
+    }
+    .titulo{
+        font-size: 32px;
+    }
+    .logoimg{
+        width: 60px;
+        height: 50px;
+    }
+    .isesion,
+    .reportes{
+        font-size: 16px;
+    }
+    .isesion_iniciar{
+        width: 100px;
+    }
+    .contenedor_mensaje{
+        margin-top: 90px;
+    }
+    .titacme{
+        font-size: 65px;
+    }
+    .slogan{
+        font-size: 18px;
+    }
+    .cantidad i{ 
+        font-size: 45px;
+    }
+
+    .cantidad div{
+        font-size: 12px;
+    }
+    .section, 
+    .abast-productos{
+        flex-direction: row;
+    }
+    .abast-productos_texto{
+        font-size: 13px;
+    }
+    .linea {
+        border-top: 1px solid black;
+        height: 2px;
+        width: 22%;
+        max-width: 70%;
+        padding: 0;
+        margin: 20px auto 15px auto;
+    }
+    .aside a,
+    .nav-productos a{
+        font-size: 13.5px;
+    }
+    .destacados{
+        margin-top: 0;
+    }
+    .hrn{
+        flex-direction: column;
+    }
+    .redes{
+        margin-top: 25px;
+    }
+    .home{
+        margin-top: 20px;
+    }
+    .close,
+    .container_ubicorreo{
+        font-size: 12px;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1024px){ 
+    .header{
+        height: 480px;
+    }
+    .menu{
+        height: 65px;
+    }
+    .logoimg{
+        width: 75px;
+        height: 65px;
+        margin-left: 30px;
+    }
+    .titulo{
+        font-size: 45px;
+    }
+    .isesion,
+    .reportes{
+        font-size: 18px;
+    }
+    .reportes{
+        margin-right: 40px;
+    }
+    .isesion_iniciar{
+        width: 120px;
+    }
+    .contenedor_mensaje{
+        margin-top: 120px;
+    }
+    .titacme{
+        font-size: 90px;
+    }
+    .slogan{
+        font-size: 25px;
+    }
+    .cantidad i{
+        font-size: 50px;
+    }
+    .cantidad div{
+        font-size: 16px;
+    }
+    .section, 
+    .abast-productos{
+        flex-direction: row;
+    }
+
+    .abast-productos_texto{
+        font-size: 18px;
+    }
+    .linea {
+        border-top: 1px solid black;
+        height: 2px;
+        width: 23%;
+        max-width: 70%;
+        padding: 0;
+        margin: 20px auto 15px auto;
+    }
+    .product_img{
+        width: 215px;
+        height: 180px;
+    }
+    .info_product{
+        font-size: 20px;
+    }
+
+    .info_product a{
+        margin-top: 18px;
+        font-size: 16px;
+    }
+    .nav-productos a{
+        font-size: 15px;
+    }
+
+    .aside a{
+        font-size: 17px;
+    }
+    .destacados{
+        margin-top: 0;
+        font-size: 14px;
+    }
+    .hrn{
+        flex-direction: column;
+    }
+    .redes{
+        margin-top: 35px;
+    }
+    .home{
+        margin-top: 20px;
+    }
+    .close,
+    .container_ubicorreo{
+        font-size: 15px;
+    }
+    .cont_ventana{
+        width: 330px;
+    }
+}
+
+

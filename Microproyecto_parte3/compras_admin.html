@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME S.A.S | Compras</title>
+    <link rel="stylesheet" href="css/base_admin.css">
+    <link rel="stylesheet" href="css/basetabla_admin.css">
+    <link rel="stylesheet" href="css/vm_compras.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/icono_sinfondo.png">
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html"><img class="logoimg" src="img/icono_sinfondo.png"></a>
+                </div>
+                <div class="titulo">ACME S.A.S </div>
+                <div class="isesion">
+                    <a class="isesion_iniciar" href="principal_admin.html">juanperez ▾</a>
+                </div>
+            </div>
+            <div class="navegacion">
+                <div class="nav">
+                    <a href="compras_admin.html">Compras</a>
+                    <a href="catalogos_admin.html">Catálogos</a>
+                    <a href="cotizaciones_admin.html">Cotizaciones</a>
+                    <a href="ordenes_admin.html">Ordenes de trabajo</a>
+                    <a href="productos_admin.html">Productos</a>
+                    <a href="clientes_admin.html">Clientes</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="seccion">
+                <div class="titulo_com">Compras de productos</div>
+                <div class="table-container">
+                    <div class="header-tabla">
+                        <div class="btnybuscar">
+                            <div class="boton_crear"> <button id="btn-crear" class=" boton boton_crearinput">Crear</button></div>
+                            <div class="titulotabla">Compras realizadas</div>
+                            <div class="caja_buscar">
+                                <input type="search" id="input_buscar"  placeholder="Buscar compra...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <table id="grid" class="table">
+                        <thead>
+                            <th></th>
+                            <!--<th>Nombre</th>-->
+                            <th>Proveedor</th>
+                            <th>Fecha de compra</th>
+                            <th class="thopciones">Opciones</th>
+                        </thead>
+                        <tbody>
+                    
+                        </tbody>
+                    </table>
+                    <div class="footer-tabla">
+                        <div class="pag_numeros">
+                            <ul>
+                                <li><span class="bt">1</span></li>
+                                <li><input class="bt" type="submit" value="2"></li>
+                                <li><input class="bt" type="submit" value="3"></li>
+                                <li><input class="bt" type="submit" value="4"></li>
+                                <li><input class="bt" type="submit" value="..."></li>
+                                <li><input class="bt" type="submit" value="9"></li>
+                                <li><input class="bt" type="submit" value="10"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <input class="boton_volver boton" type="submit" onclick="location.href='principal_admin.html'"
+                    value="Volver">
+
+            </div>
+            <aside class="aside">
+                <h6 class="destacados">Destacados</h6>
+                <div class="hrn">
+                    <a href="index.html" class="home"><i class="fa fa-home" aria-hidden="true"
+                            style="padding: 0 ;margin-right: 10px;"></i>Home</a>
+                    <a href="reportes.html" class="report">Reportes</a>
+                    <a href="#" class="novedades">Novedades</a>
+                </div>
+                <a href="#" class="redes">
+                    <div>Redes sociales</div>
+                    <div class="redes_iconos">
+                        <a href="#"><img class="red"
+                                src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png"></a>
+                        <a href="#"><img class="red"
+                                src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png"></a>
+                    </div>
+                </a>
+            </aside>
+        </section>
+
+        <footer class="footer">
+            <div class="close">
+                Copyright<i class="fa fa-copyright" aria-hidden="true" style="padding: 4px;"></i>2021
+                <div>Todos los derechos reservados</div>
+            </div>
+            <div class="container_ubicorreo">
+                <div class="footer_ubicacion">
+                    <i class="fa fa-home" aria-hidden="true" style="padding: 0;"></i> Carrera 18N #52 -22
+                </div>
+                <div class="footer_correo">
+                    <i class="fa fa-envelope" aria-hidden="true" style="padding: 0;"></i> acme@gmail.com
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="ventana_crear" id="ventanacrear">
+            <div class="cont_ventana">
+                <div class="ventana_header">
+                    <div class="titulo_vent">Registrar Compra</div>
+                </div>
+                <form class="formulario">
+                    <div class="nom-provee">
+                        <h5 for="">Proveedor</h5>
+                        <input id="proveedor" type="text" placeholder="Proveedor">
+                        <small>Error message</small> 
+                    </div>
+                    <div class="fecha">
+                        <h5 for="">Fecha</h5>
+                        <input id="fecha" type="date" placeholder="">
+                        <small>Error message</small> 
+                    </div>
+                    <div class="prod">
+                        <h5 for="">Productos</h5>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <button id= "btn-agregar" class="boton_ag boton" >Agregar</button>
+                    </div>
+
+                </form>
+                <div class="seccion">
+                    <div class="titulo_prod">Productos de la compra</div>
+                    <!--Tabla-->
+                    <div class="table_vent-container">
+                        <table id="grid2" class="table_vent">
+                            <thead>
+                                <th></th>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Categoria</th>
+                                <th>Precio</th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                        
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="botones_ventana">
+                    <button id ="btn-cerrar"class="boton_cerrar boton">Cerrar</button>
+                    <button id= "btn-guardar" class="boton_guardar boton" >Guardar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ventana_produc" id="ventanaproduc">
+            <div class="cont_ventana cont_ventana2">
+                <div class="ventana_header">
+                    <div class="titulo_vent">Agregar productos a la compra</div>
+                </div>
+
+                <form class="formulario_v2">
+                    <div class="formp1">
+                        <div class="form_codi">
+                            <h6 for="">Código</h6>
+                            <input id="codigo" class="v2_input" type="text" placeholder="Código">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_cat">
+                            <h6 for="">Categoría</h6>
+                            <input id="categoria" class="v2_input" type="text" placeholder="Categoría">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_precioen">
+                            <h6 for="">Precio Entrada</h6>
+                            <input id="precioin" class="v2_input" type="text" placeholder="Precio entrada">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_descrip">
+                            <h6 for="">Descripción</h6>
+                            <input id="descr"class="v2_input" type="text" placeholder="Descripción">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_presentacion">
+                            <h6 for="">Presentación</h6>
+                            <input id="pres" type="text" placeholder="Presentación">
+                            <small>Error message</small> 
+                        </div>
+                    </div>
+
+                    <div class="formp2">
+                        <div class="form_nombre">
+                            <h6 for="">Nombre</h6>
+                            <input id="nombreprod" class="v2_input" type="text" placeholder="Nombre producto">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_ubic">
+                            <h6 for="">Ubicación</h6>
+                            <select id="ubicacion" name="Ubicación">
+                                <option value="Bodega">Bodega</option>
+                                <option value="Vitrina">Vitrina</option>
+                            </select>
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_preciosal">
+                            <h6 for="">Precio Salida</h6>
+                            <input id="preciout"class="v2_input" type="text" placeholder="Precio salida">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_unidad">
+                            <h6 for="">Unidad</h6>
+                            <input id="unidad" type="text" placeholder="Unidad">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_agregarimg">
+                            <h6 for="">Agregar imagen</h6>
+                            <div class="botonagregar">+</div>
+                        </div>
+                    </div>
+                </form>
+                <div class="containerbtn">
+                    <button id="btn-atras" class="boton_atras boton">Atrás</button>
+                       <button id= "btn-agregar2" class="boton_ag boton"  >Agregar producto</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ventana_mod" id="ventanamod">
+            <div class="cont_ventana">
+                <div class="ventana_header">
+                    <div  class="titulo_vent">Modificar Compra</div>
+                </div>
+                <form class="formulario">
+                    <div class="nom-provee">
+                        <h5 for="">Proveedor</h5>
+                        <input id="proveedor2" type="text">
+                        <small>Error message</small> 
+                    </div>
+                    <div class="fecha">
+                        <h5 for="">Fecha</h5>
+                        <input id="fecha2" type="date">
+                        <small>Error message</small> 
+                    </div>
+                   <!-- <div class="prod">
+                        <h5 for="">Productos</h5>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <button id="btn-agregarmod" class="boton_ag boton" >Agregar</button>
+                    </div>-->
+
+                </form>
+                <div class="seccion">
+                    <div class="titulo_prod">Productos de la compra</div>
+                    <!--Tabla-->
+                    <div class="table_vent-container">
+                        <table id="grid3" class="table_vent">
+                            <thead>
+                                <th></th>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Categoria</th>
+                                <th>Precio</th>
+                                <th>Opciones</th>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="botones_ventana">
+                    <button id ="btn-cerrar2" class="boton_cerrar boton">Cerrar</button>
+                    <button id= "btn-guardar2" class="boton_guardar boton" >Guardar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ventana_producmod" id="ventanaproducmod">
+            <div class="cont_ventana cont_ventana2">
+                <div class="ventana_header">
+                    <div id="titulo" class="titulo_vent">Modificar producto</div>
+                </div>
+
+                <form class="formulario_v2">
+                    <div class="formp1">
+                        <div class="form_codi">
+                            <h6 for="">Código</h6>
+                            <input id="codigo2" class="v2_input" type="text" placeholder="Código">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_cat">
+                            <h6 for="">Categoría</h6>
+                            <input id="categoria2" class="v2_input" type="text" placeholder="Categoría">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_precioen">
+                            <h6 for="">Precio Entrada</h6>
+                            <input id="precioin2" class="v2_input" type="text" placeholder="Precio entrada">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_descrip">
+                            <h6 for="">Descripción</h6>
+                            <input id="descr2"class="v2_input" type="text" placeholder="Descripción">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_presentacion">
+                            <h6 for="">Presentación</h6>
+                            <input id="pres2" type="text" placeholder="Presentación">
+                            <small>Error message</small> 
+                        </div>
+                    </div>
+
+                    <div class="formp2">
+                        <div class="form_nombre">
+                            <h6 for="">Nombre</h6>
+                            <input id="nombreprod2" class="v2_input" type="text" placeholder="Nombre producto">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_ubic">
+                            <h6 for="">Ubicación</h6>
+                            <select id="ubicacion2" name="Ubicación">
+                                <option value="Bodega">Bodega</option>
+                                <option value="Vitrina">Vitrina</option>
+                            </select>
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_preciosal">
+                            <h6 for="">Precio Salida</h6>
+                            <input id="preciout2"class="v2_input" type="text" placeholder="Precio salida">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_unidad">
+                            <h6 for="">Unidad</h6>
+                            <input id="unidad2" type="text" placeholder="Unidad">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="form_agregarimg">
+                            <h6 for="">Agregar imagen</h6>
+                            <div class="botonagregar">+</div>
+                        </div>
+                    </div>
+                </form>
+                <div class="containerbtn">
+                    <button id="btn-atras2" class="boton_atras boton">Atrás</button>
+                       <button id= "btn-guardarcambios" class="boton_guardarc boton"  >Guardar</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+<script src="js/domcompras.js"></script>
+
+</html>

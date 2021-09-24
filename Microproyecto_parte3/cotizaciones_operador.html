@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME S.A.S | Cotizaciones</title>
+    <link rel="stylesheet" href="css/base_admin.css">
+    <link rel="stylesheet" href="css/basetabla_admin.css">
+    <link rel="stylesheet" href="css/vm_cotizaciones.css">
+
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/icono_sinfondo.png">
+</head>
+
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html"><img class="logoimg" src="img/icono_sinfondo.png"></a>
+                </div>
+                <div class="titulo">ACME S.A.S </div>
+                <div class="isesion">
+                    <a class="isesion_iniciar" href="principal_operador.html">juanperez ▾</a>
+                </div>
+            </div>
+            <div class="navegacion">
+                <div class="nav">
+                    <a href="cotizaciones_operador.html">Cotizaciones</a>
+                    <a href="ordenes_operador.html">Ordenes de trabajo</a>
+                    <a href="productos_operador.html">Productos</a>
+                    <a href="clientes_operador.html">Clientes</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="seccion">
+                <div class="titulo_com">Cotizaciones</div>
+                <div class="table-container">
+                    <div class="header-tabla">
+                        <div class="btnybuscar">
+                            <div class="boton_crear"> <button id="btn-crear" class=" boton boton_crearinput">Crear</button></div>
+                            <div class="titulotabla">Cotizaciones registradas</div>
+                            <div class="caja_buscar">
+                                <input type="search" id="input_buscar" class="input_buscar" placeholder="Buscar cotización...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <table id="grid" class="table">
+                        <thead>
+                            <th></th>
+                            <th>Cliente</th>
+                            <th>Productos cotizados</th>
+                            <th>Fecha de cotización</th>
+                            <th class="thopciones">Opciones</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                    <div class="footer-tabla">
+                        <div class="pag_numeros">
+                            <ul>
+                                <li><span class="bt">1</span></li>
+                                <li><input class="bt" type="submit" value="2"></li>
+                                <li><input class="bt" type="submit" value="3"></li>
+                                <li><input class="bt" type="submit" value="4"></li>
+                                <li><input class="bt" type="submit" value="..."></li>
+                                <li><input class="bt" type="submit" value="9"></li>
+                                <li><input class="bt" type="submit" value="10"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <input class="boton_volver boton" type="submit" onclick="location.href='principal_admin.html'"
+                    value="Volver">
+
+            </div>
+            <aside class="aside">
+                <h6 class="destacados">Destacados</h6>
+                <div class="hrn">
+                    <a href="index.html" class="home"><i class="fa fa-home" aria-hidden="true"
+                            style="padding: 0 ;margin-right: 10px;"></i>Home</a>
+                    <a href="reportes.html" class="report">Reportes</a>
+                    <a href="#" class="novedades">Novedades</a>
+                </div>
+                <a href="#" class="redes">
+                    <div>Redes sociales</div>
+                    <div class="redes_iconos">
+                        <a href="#"><img class="red"
+                                src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png"></a>
+                        <a href="#"><img class="red"
+                                src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png"></a>
+                    </div>
+                </a>
+            </aside>
+        </section>
+
+        <footer class="footer">
+            <div class="close">
+                Copyright<i class="fa fa-copyright" aria-hidden="true" style="padding: 4px;"></i>2021
+                <div>Todos los derechos reservados</div>
+            </div>
+            <div class="container_ubicorreo">
+                <div class="footer_ubicacion">
+                    <i class="fa fa-home" aria-hidden="true" style="padding: 0;"></i> Carrera 18N #52 -22
+                </div>
+
+                <div class="footer_correo">
+                    <i class="fa fa-envelope" aria-hidden="true" style="padding: 0;"></i> acme@gmail.com
+                </div>
+            </div>
+        </footer>
+
+
+
+        <div class="ventana_crear" id="ventanacrear">
+            <div class="cont_ventana">
+                <div class="ventana_header">
+                    <div class="titulo_vent">Registrar Cotización</div>
+                </div>
+                <form class="formulario">
+                    <div class="formp1">
+                        <div class="nom-cli">
+                            <h5>Nombre</h5>
+                            <input id="nombre" type="text" placeholder="Nombre">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="dire">
+                            <h5 for="">Dirección</h5>
+                            <input id="direccion" type="text" placeholder="Dirección">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="tel">
+                            <h5 for="">Teléfono</h5>
+                            <input id="telefono" type="text" placeholder="Teléfono">
+                            <small>Error message</small> 
+                        </div>
+
+                    </div>
+
+                    <div class="formp2">
+                        <div class="apelli">
+                            <h5 for="">Apellido</h5>
+                            <input id="apellido" type="text" placeholder="Apellidos">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="em">
+                            <h5 for="">Email</h5>
+                            <input id="email" type="email" placeholder="Email">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="fech">
+                            <h5 for="">Fecha de cotización</h5>
+                            <input id="fecha" type="date" placeholder="Fecha">
+                            <small>Error message</small>
+                        </div>
+                    </div>
+                </form>
+                <div class="prod">
+                    <h5 for="">Productos</h5>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <button id= "btn-agregar" class="boton_ag boton" >Agregar</button>
+                </div>
+                <div class="seccion">
+                    <div class="titulo_prod">Productos cotizados</div>
+                    <div class="table_vent-container">
+                        <table id="grid2" class="table_vent">
+                            <thead>
+                                <th></th>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Categoría</th>
+                                <th>Cantidad</th>
+                                <th>Precio unitario</th>
+                                <th></th>
+                            
+                            </thead>
+                            <tbody>
+                                                
+                            </tbody>
+                        </table>
+    
+                    </div>
+
+                </div>
+
+                <div class="botones_ventana">
+                    <button id ="btn-cerrar" class="boton_cerrar boton">Cerrar</button>
+                    <button id= "btn-guardar" class="boton_guardar boton" >Guardar</button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="ventana_produc" id="ventanaproduc">
+            <div class="cont_ventana cont_ventana2">
+                <div class="ventana_header">
+                    <div class="titulo_vent">Agregar productos a la cotización</div>
+                </div>
+                <form class="formulario_v2">
+                    <div class="cod">
+                        <h5 for="">Código del producto</h5>
+                        <input id="codigo" type="text" placeholder="Código">
+                        <small>Error message</small> 
+                    </div>
+                    <div class="cant">
+                        <h5 for="">Cantidad</h5>
+                        <input id="cantidad" type="number" placeholder="Cantidad">
+                        <small>Error message</small> 
+                    </div>
+                    <div class="prod2">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <button id="btn-agregar2" >Agregar</button>
+                    </div>
+
+                </form>
+                <div class="seccion">
+                    <!--Tabla-->
+                    <div class="titulo_prod">Productos de la cotización</div>
+                    <div class="table_vent-container">
+                        <table id="grid3" class="table_vent">
+                            <thead>
+                                <th></th>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Categoria</th>
+                                <th>Cantidad</th>
+                                <th>Precio unitario</th>
+                                
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="botones_ventana">
+                    <button id ="btn-atras" class="boton_cerrar boton">Atrás</button>
+                    <button id= "btn-guardar2" class="boton_guardar boton" >Guardar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ventana_mod" id="ventanamod">
+            <div class="cont_ventana">
+                <div class="ventana_header">
+                    <div class="titulo_vent">Modificar Cotización</div>
+                </div>
+                <form class="formulario">
+                    <div class="formp1">
+                        <div class="nom-cli">
+                            <h5>Nombre</h5>
+                            <input id="nombre2" type="text" placeholder="Nombre">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="dire">
+                            <h5 for="">Dirección</h5>
+                            <input id="direccion2" type="text" placeholder="Dirección">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="tel">
+                            <h5 for="">Teléfono</h5>
+                            <input id="telefono2" type="text" placeholder="Teléfono">
+                            <small>Error message</small> 
+                        </div>
+
+                    </div>
+
+                    <div class="formp2">
+                        <div class="apelli">
+                            <h5 for="">Apellido</h5>
+                            <input id="apellido2" type="text" placeholder="Apellidos">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="em">
+                            <h5 for="">Email</h5>
+                            <input id="email2" type="email" placeholder="Email">
+                            <small>Error message</small> 
+                        </div>
+                        <div class="fech">
+                            <h5 for="">Fecha de cotización</h5>
+                            <input id="fecha2" type="date" placeholder="Fecha">
+                            <small>Error message</small>
+                        </div>
+                    </div>
+                </form>
+              <!-- <div class="prod">
+                    <h5 for="">Productos</h5>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <input type="submit" onclick="location.href='#ventanaproduc'" value="Agregar">
+                </div>--> 
+
+                <div class="seccion">
+                    <div class="titulo_prod">Productos cotizados</div>
+                    <div class="table_vent-container">
+                        <table  id="gridmod" class="table_vent">
+                            <thead>
+                                <th></th>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Categoría</th>
+                                <th>Cantidad</th>
+                                <th>Precio unitario</th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="botones_ventana">
+                    <button id ="btn-cerrar2" class="boton_cerrar boton">Cerrar</button>
+                    <button id= "btn-guardarcambios" class="boton_guardar boton" >Guardar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="ventana_producmod" id="ventanaproducmod">
+            <div class="cont_ventana cont_ventana2">
+                <div class="ventana_header">
+                    <div class="titulo_vent">Modificar producto</div>
+                </div>
+                <form class="formulario_v2">
+                    <div class="cod">
+                        <h5 for="">Código del producto</h5>
+                        <input id="codigo2" type="text" placeholder="Código">
+                        <small>Error message</small> 
+                    </div>
+                    <div class="cant">
+                        <h5 for="">Cantidad</h5>
+                        <input id="cantidad2" type="number" placeholder="Cantidad">
+                        <small>Error message</small> 
+                    </div>
+                    <div class="prod2">
+                    <!--<i class="fa fa-plus" aria-hidden="true"></i>--->
+                        <button id="btn-editarmod">Editar</button>
+                    </div>
+
+                </form>
+                <div class="seccion">
+                    <!--Tabla-->
+                    <div class="titulo_prod">Productos de la cotización</div>
+                    <div class="table_vent-container">
+                        <table id="gridmod2" class="table_vent">
+                            <thead>
+                                <th></th>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Categoria</th>
+                                <th>Cantidad</th>
+                                <th>Precio unitario</th>
+                                
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="botones_ventana">
+                    <button id ="btn-atrascambios"class="boton_cerrar boton">Atrás</button>
+                    <button id= "btn-guardarcambios2" class="boton_guardar boton" >Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/domcotizaciones.js"></script>
+</html>

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+* { 
+    margin: 0; 
+    padding: 0px;
+    box-sizing: border-box; 
+    font-family: 'Lato', sans-serif; 
+}
+
+.seccion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    background-color: white;
+    
+}
+    .titulo_com{ 
+        text-transform: uppercase;
+        font-size: 12px;
+        background:#303030;;
+        color: white;
+        padding: 8.5px;
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid white;
+    }
+
+    /*TABLA*/
+    .table-container{
+        background-color: white;
+        border-radius: 3px;
+        font-size: 11px;
+        width: 99%; 
+        height: 100%;
+        overflow-x: auto;
+    }
+   .header-tabla{
+        display: flex;
+        justify-content: center;
+
+    }
+        .headercaja{ 
+            margin: 10px 0;
+        }
+            .cajatitulo{ 
+                display: flex;
+                justify-content: center;
+                font-size: 13px;
+            }
+            .cajafechas{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+        .cajafechas h3{
+            margin: 0 6px;
+        }
+        .cajafechas input{
+            width: 150px;
+        }
+        .cajafechaini,
+        .cajafechafin{
+            display: flex;
+            align-items: center;
+            margin: 10px 20px;
+        }
+
+    .table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+        .table thead{
+            background-color: #0090b9;
+            color: white;
+            font-size: 12px;
+        }
+
+        .table th,
+        .table td{
+            padding: 8px;
+            border-bottom: 1px solid rgb(61, 68, 73);
+        }
+
+        .table th{
+
+            border-bottom: 3px solid rgb(61, 68, 73);
+        }
+        .table tbody tr:nth-child(even){
+            background-color: rgba(219, 219, 219, 0.767);
+
+        }
+        .boton{  
+            text-align: center;
+            font-weight: bolder;
+            border-radius: 15px;
+            width: 65px;
+            padding: 5px;
+            border: 1px solid #0090b9;
+            background-color: #0090b9;
+            color: white;
+            cursor: pointer;
+            outline: none;
+        }
+        .botones{
+            display: flex;   
+            justify-content: center;
+            height: 100%;
+            border-left: 1px solid rgba(61, 68, 73, 0.671); ;
+        }
+            .botones input{
+                margin: 0 8px;
+                font-size: 12px;
+            }
+ 
+    .pag_numeros{ 
+        margin-left: auto;
+        margin-right: 0;
+        width: 50%;
+    }
+
+        .pag_numeros ul{
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-end; 
+        }
+        .pag_numeros li{
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        .bt{
+            width: 100%;
+            border:0;
+            border-radius: 3px;
+            background: transparent;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 6px 8px;
+            font-weight: bold;
+        }
+
+            .bt:hover{
+                background: #2ea7ac ;
+            }
+        
+        tbody tr:hover{
+            background-color: #0091b942;
+            color: black;
+            font-weight: bold;
+        }
+
+
+/*Móvil*/
+@media only screen and (min-width: 311px) and (max-width: 767px){ 
+}
+    
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px){ 
+    .boton{
+        font-size: 13px;
+    }
+    .titulo_com{
+        font-size: 14px;
+        padding: 8px;
+    }
+    .table-container{
+        font-size: 12px;
+    }
+}
+
+/*Desktop*/
+@media only screen and (min-width: 1024px){ 
+    .boton{
+        font-size: 14px;
+    }
+    .table-container{
+        font-size: 13px;
+    }
+    .titulo_com{ 
+        font-size: 15px;
+        padding: 9.5px;
+    }
+    .table thead{ 
+        font-size: 15px;
+    }
+    .bt{
+        font-size: 13px;
+    }
+    .cajatitulo{
+        font-size: 15px;
+    }
+    .boton_volver{
+        height: 35px;
+        width: 80px;
+        margin-top: -25px;
+        margin-bottom: 5px;
+    }
+}

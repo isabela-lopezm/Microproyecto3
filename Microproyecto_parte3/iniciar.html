@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME S.A.S | Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/iniciar.css">
+    <link rel="icon" href="img/icono_sinfondo.png">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="menu margin-container">
+            <div class="logo">
+                <a href="index.html"><img class="logoimg" src="img/icono_sinfondo.png"></a>
+            </div>
+            <div class="titulo">ACME S.A.S</div>
+            <div class="isesion">
+                <a class="isesion_iniciar" href="iniciar.html">Iniciar Sesión</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="iniciar">Iniciar sesión</div>
+            <div class="logo">
+                <img class="logo-acme" src="img/logo_segundo.png">
+            </div>
+            <form class="formulario">
+                <div class="usuario">
+                    <input id="usuario" type="text" placeholder="Usuario">
+                    <small>Error message</small> 
+                </div>
+                <div class="contraseña">
+                    <input id="contra" type="password" placeholder="Contraseña">
+                    <small>Error message</small> 
+                </div>
+            </form>
+
+            <div class="record-haz">
+                <label><input type="checkbox" id="cbox1">Recordarme</label>
+                <a href="#" class="haz">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="ini_crear">
+                <button id= "btn-iniciar" class="boton">Iniciar Sesión</button>
+  
+                <div class="crear_cuenta">Crear cuenta</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/dominiciar.js"></script>
+</html>
